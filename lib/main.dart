@@ -15,6 +15,8 @@ class MyApp extends StatelessWidget {
      home: HomePage(),
       getPages: [
         GetPage(name: '/next', page: () => NextPage()),
+        GetPage(name: '/todo', page: () => ToDoList()),
+
         //GetPage(name: '/snack', page: ()=> SnackBarPage()),
       ],
     );
@@ -61,6 +63,15 @@ class HomePage extends StatelessWidget {
                   child: Text('route3'),
                   onPressed: () {
                     Get.defaultDialog(title: 'Dialog', middleText: 'Dialog');
+                  },
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                ),
+                new RaisedButton(
+                  child: Text('route4'),
+                  onPressed: () {
+                    Get.toNamed('/todo');
                   },
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30)
