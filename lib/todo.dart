@@ -1,5 +1,19 @@
 import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'main.dart';
+
+//import 'package:splashscreen/splashscreen.dart';
+import 'dart:async';
+import 'dart:core';
+
+class Todo{
+  bool isDone = false;
+  String title;
+
+  Todo(this.title,{this.isDone = false});
+}
 
 class ToDoList extends StatefulWidget {
   @override
