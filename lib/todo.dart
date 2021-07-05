@@ -101,7 +101,7 @@ class _State extends State<ToDoList> {
                 ),
                 ElevatedButton(
                   onPressed: () => _addTodo(Todo(toDoController.text)),
-                  child: Text('ADD'),
+                  child: Text('add todo'),
 
                 )
               ],
