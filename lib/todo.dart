@@ -31,9 +31,9 @@ class _State extends State<ToDoList> {
     super.dispose();
   }
   void _addTodo(Todo todo){
-    FirebaseFirestore.instance
-        .collection('todo').add({'title' : todo.title, 'isDone':todo.isDone});
-    toDoController.text = '';
+    //FirebaseFirestore.instance
+    //    .collection('todo').add({'title' : todo.title, 'isDone':todo.isDone});
+   // toDoController.text = '';
     /*
     setState(() {
       _item.add(todo);
