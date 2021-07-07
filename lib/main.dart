@@ -3,9 +3,10 @@ import 'todo.dart';
 import 'package:get/get.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-
+import 'practice.dart';
 import 'dart:async';
 import 'dart:core';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(name: '/next', page: () => NextPage()),
         GetPage(name: '/todo', page: () => ToDoList()),
+        GetPage(name: '/practice', page:()=>GetPage()),
 
         //GetPage(name: '/snack', page: ()=> SnackBarPage()),
       ],
